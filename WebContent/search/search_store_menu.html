@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>食在方便</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="short Icon" type="images/x-icon" href="../../images/logo.png">
+		<link rel="stylesheet" href="css/search_store_menu.css">
+
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    <script src="js/search_store_menu.js"></script>
+
+  </head>
+	<body>
+
+
+
+	<!--導覽列==========================================================================-->
+<header>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="../../index.html" class="navbar-brand" href="#" id="navbar-title"><img src="../../images/logo.png" width="30px" id="imgTop" class="pull-left"><b>食在方便</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+            <li><a href="search.html" style="background-color:#C63300;border-color: #C63300;">搜尋店家</a></li>
+            <li><a href="../blog/blog.html">美食日記</a></li>
+            <li><a href="../rank/rank.html">排行榜</a></li>
+            <li><a href="#">便當盒</a></li>
+            <li><a href="../member/member.html">會員專區</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+           <li><a href="../../class/member/login.html"><span class="glyphicon glyphicon-user"></span><b> 會員登入</b></a></li>
+           <li><a href="../../class/store/str_login.html"><span class="glyphicon glyphicon-home"></span><b> 店家登入</b></a></li>
+    </ul>       
+    
+ </div>
+</nav>
+</header>
+
+
+
+<div class="container">
+ <!--第一列===================================================================-->
+  <div class="row firstRow">
+
+    <form class="form-horizontal">
+    <div class="col-xs-12 col-sm-3">
+      <div>
+
+          <label class="control-label" for="address">
+            <span class="glyphicon glyphicon-globe"></span> 依地址:
+            </label>
+
+            <div>
+              <input class="form-control " type="text" name="address" id="address" value= "台北市" >
+            </div>
+      </div>
+      <br>
+      <div>
+            <label class="control-label">
+            <span class="glyphicon glyphicon-cutlery"></span> 依取餐方式:
+            </label>
+            <br>
+            <input type="radio" name="type" checked="" value="">自取　
+            <input type="radio" name="type" value="">外送
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-3">
+      <div>
+            <label class="checkbox">
+            <span class="glyphicon glyphicon-home"></span> 依店家類別:
+            </label>
+
+            <input type="checkbox" name="store_style" value="">中式　　
+            <input type="checkbox" name="store_style" value="">西式<br>
+            <input type="checkbox" name="store_style" value="">義式　　
+            <input type="checkbox" name="store_style" value="">泰式<br>
+            <input type="checkbox" name="store_style" value="">法式　　
+            <input type="checkbox" name="store_style" value="">越式<br>
+            
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-3">
+      <div>
+            <label class="control-label" >
+            <span class=" glyphicon glyphicon-usd" ></span> 依菜單價錢:
+            </label>
+            <br>
+            <input type="radio" name="price_range" value="">$150以下<br>
+            <input type="radio" name="price_range" value="">$150~500<br>
+            <input type="radio" name="price_range" value="">$500~1000<br>
+            <input type="radio" name="price_range" value="">$1000以上<br>
+
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-3">
+      <div>
+            <label class="control-label" for="keyWord">
+            <span class=" glyphicon glyphicon-search"></span> 依關鍵字:
+            </label>
+
+            <div>
+              <input class="form-control" type="text" name="keyWord" id="keyWord" value= "" placeholder="輸入美食關鍵字" >
+            </div>
+            <br>
+            <a href="search.html" class="btn btn-success btn-lg" role="button"><b>查詢</b></a>
+
+      </div>
+      </form>
+    </div>
+
+  </div>
+
+ <!--第二列===================================================================-->
+
+  <div class="row">
+   <!--第二列左邊部份==================================================-->
+    <div class="col-xs-12 col-sm-3 " id="search_store_list">
+
+  <ul class="nav nav-pills nav-stacked" >
+    <li><a href="search_store.html" class="search_store_left"><b>店家介紹</b></a></li>
+    <li><a href="search_store_blog.html" class="search_store_left"><b>美食日記分享</b></a></li>
+    <li><a href="search_store_comment.html" class="search_store_left"><b>店家評價</b></a></li>
+    <li><a href="search_store_online.html" class="search_store_left"><b>線上諮詢</b></a></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle search_store_left" data-toggle="dropdown" href="#" id="orderMenu"><b>餐點與訂購</b>
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">所有餐點</a></li>
+          <li><a href="#">麵食類</a></li>
+          <li><a href="#">炒飯類</a></li>
+          <li><a href="#">甜點類</a></li>
+          <li><a href="#">促銷餐點</a></li>
+          <li><a href="#">XX類</a></li>
+        </ul>
+    </li>
+  </ul>
+    </div>
+
+
+<!--第二列右邊部份==================================================-->
+    <div class="col-xs-12 col-sm-9 " id="search_store_content">
+
+    <!--第二列右邊第一排==========================================-->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <p class="storeNav"><b>首頁 > 搜尋店家 > 餐點與訂購 > 所有餐點</b></p>
+          <p class="discount_title"><b>
+          餐點2+餐點4　或　餐點2+餐點6<br>
+          現正優惠中!!!!!!要買要快~~
+          </b></p>
+          <h2 style="font-family:Microsoft JhengHei"><b><center>餐點</center></b></h2>
+        </div>
+      </div>
+      <br>
+
+
+    <!--第二列右邊第二排==========================================-->
+      <div class="row" >
+        <div class="col-xs-12 col-sm-4 food" >
+          <table class="text-center">
+            <tr><th class="text-center"><h4><b>餐點1</b></h4></th></tr>
+            <tr><td><img src="../../images/index/food/food4.jpg" class="food_img"></td></tr>
+            <tr><td>
+            <button class="buttonAdd" id="btadd1" onclick="addCount1()">+</button>　數量: <input type="text" id="count1" size="1" value="1" class="count">　
+            <button class="buttonLess" id="btless1" onclick="lessCount1()">-</button>
+            </td></tr>
+            <tr><td>價錢: 1000元</td></tr>
+            <tr><td><a href="#" class="btn btn-danger btn-xs carButton" role="button">加入購物車</a></td></tr>   
+          </table>
+        </div>
+        <div class="col-xs-12 col-sm-4 food">
+          <table>
+            <tr><th><h4><center><b>餐點2</b></h4></center></th></tr>
+            <tr><td><img src="../../images/index/food/food5.jpg" class="food_img"></td></tr>
+            <tr><td><center>
+            <button class="buttonAdd" id="btadd2" onclick="addCount2()">+</button>　數量: <input type="text" id="count2" size="1" value="1" class="count">　
+            <button class="buttonLess" id="btless2" onclick="lessCount2()">-</button>
+            </center></td></tr>
+            <tr><td><center>價錢: 1000元</center></td></tr>
+            <tr><td><center><img src="images/discount.png" align="left" class="discount_img"><a href="#" class="btn btn-danger btn-xs carButton" role="button">加入購物車</a></center></td></tr>   
+          </table>
+        </div>
+        <div class="col-xs-12 col-sm-4 food">
+          <table align="center">
+            <tr><th><h4><center><b>餐點3</b></h4></center></th></tr>
+            <tr><td><img src="../../images/index/food/food6.jpg" class="food_img"></td></tr>
+            <tr><td><center>
+            <button class="buttonAdd" id="btadd3" onclick="addCount3()">+</button>　數量: <input type="text" id="count3" size="1" value="1" class="count">　
+            <button class="buttonLess" id="btless3" onclick="lessCount3()">-</button>
+            </center></td></tr>
+            <tr><td><center>價錢: 1000元</center></td></tr>
+            <tr><td><center><a href="#" class="btn btn-danger btn-xs carButton" role="button">加入購物車</a></center></td></tr>    
+          </table>
+        </div>
+      </div>
+
+
+    <!--第二列右邊第三排==========================================-->
+      <div class="row" >
+        <div class="col-xs-12 col-sm-4 food" >
+          <table align="center">
+            <tr><th><h4><center><b>餐點4</b></h4></center></th></tr>
+            <tr><td><img src="../../images/index/food/food4.jpg" width="200px" class="food_img"></td></tr>
+            <tr><td><center>
+            <button class="buttonAdd" id="btadd4" onclick="addCount4()">+</button>　數量: <input type="text" id="count4" size="1" value="1" class="count">　
+            <button class="buttonLess" id="btless4" onclick="lessCount4()">-</button>
+            </center></td></tr>
+            <tr><td><center>價錢: 1000元</center></td></tr>
+            <tr><td><center><img src="images/discount.png" align="left" class="discount_img"><a href="#" class="btn btn-danger btn-xs carButton" role="button">加入購物車</a></center></td></tr>   
+          </table>
+        </div>
+        <div class="col-xs-12 col-sm-4 food">
+          <table>
+            <tr><th><h4><center><b>餐點5</b></h4></center></th></tr>
+            <tr><td><img src="../../images/index/food/food5.jpg" width="200px" class="food_img"></td></tr>
+            <tr><td><center>
+            <button class="buttonAdd" id="btadd5" onclick="addCount5()">+</button>　數量: <input type="text" id="count5" size="1" value="1" class="count">　
+            <button class="buttonLess" id="btless5" onclick="lessCount5()">-</button>
+            </center></td></tr>
+            <tr><td><center>價錢: 1000元</center></td></tr>
+            <tr><td><center><a href="#" class="btn btn-danger btn-xs carButton" role="button">加入購物車</a></center></td></tr>     
+          </table>
+        </div>
+        <div class="col-xs-12 col-sm-4 food">
+          <table align="center">
+            <tr><th><h4><center><b>餐點6</b></h4></center></th></tr>
+            <tr><td><img src="../../images/index/food/food6.jpg" width="200px" class="food_img"></td></tr>
+            <tr><td><center>
+            <button class="buttonAdd" id="btadd6" onclick="addCount6()">+</button>　數量: <input type="text" id="count6" size="1" value="1" class="count">　
+            <button class="buttonLess" id="btless6" onclick="lessCount6()">-</button>
+            </center></td></tr>
+            <tr><td><center>價錢: 1000元</center></td></tr>
+            <tr><td><center><img src="images/discount.png" align="left" class="discount_img"><a href="#" class="btn btn-danger btn-xs carButton" role="button">加入購物車</a></center></td></tr>    
+          </table>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <ul class="pagination ">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li class="active"><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+
+     </div> 
+    </div>
+</div>
+
+<!--底部平台介紹================================================================-->
+  
+
+    <footer >
+      <div class="container">
+        <div class="col-sm-2">
+          <img src="../../images/logo.png" class="img-responsive">
+        </div>
+        <div class="col-sm-2">
+          <h5>公司</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">文件資料</a></li>
+            <li><a href="#">Packt出版社</a></li>
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">聯絡資訊</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5>社群</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">部落格</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5>客戶支援</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">聯絡資訊</a></li>
+            <li><a href="#">隱私政策</a></li>
+            <li><a href="#">條款與細則</a></li>
+            <li><a href="#">服務台</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <address>
+            <strong>食在方便有限公司</strong>
+             地址第 1 行<br>
+			       地址第 2 行<br>
+            <abbr title="Phone">TEL：</abbr> (02) 1234-5678
+          </address>
+        </div>
+      </div>
+    </footer>
+
+   
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
