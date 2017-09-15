@@ -18,11 +18,12 @@
     List<FavVO> list = favSvc.getoneFav(mem_no);
     pageContext.setAttribute("list",list); 
     
-    strService strSvc = new strService();    
-	List<StrVO> list2 = strSvc.getAll();
-    pageContext.setAttribute("list2",list2);     
+    
+//     strService strSvc = new strService();    
+// 	List<StrVO> list2 = strSvc.getAll();
+//     pageContext.setAttribute("list2",list2);     
 %>	
-<%-- 	<jsp:useBean id="storeSvc" scope="page" class="com.store.model.strService" /> --%>
+	<jsp:useBean id="storeSvc" scope="page" class="com.store.model.strService" />
 	
 	
 <html>
@@ -156,7 +157,7 @@
           	
               <c:forEach var="favVO" items="${list}">    
                 	<div class="fatable"> <img class="abc" src="images/bobo_image/4_4.jpg">
-                		<c:forEach var="strVO" items="${list2}">	
+                		<c:forEach var="strVO" items="${storeSvc.all}">	
                 			<c:if test="${favVO.str_no==strVO.str_no}"> 
                 			${strVO.str_name} 
                 			</c:if>
