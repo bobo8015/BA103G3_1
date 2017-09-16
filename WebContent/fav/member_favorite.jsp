@@ -160,6 +160,8 @@
                 		<c:forEach var="strVO" items="${storeSvc.all}">	
                 			<c:if test="${favVO.str_no==strVO.str_no}"> 
                 			${strVO.str_name} 
+                			
+                			${strVO.str_img}
                 			</c:if>
                 		</c:forEach> 	
 	                  	<div style="float:right;">

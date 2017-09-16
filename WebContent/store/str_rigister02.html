@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>Rigister Page</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+		<script>
+            var i;
+            var split;
+            function trans() {
+                i = 0;
+                var content = $("#county").val() + $("#city").val() + $("#addr").val();
+                split = content.split("\n");
+                delayedLoop();
+            }
+
+            function delayedLoop() {
+                addressToLatLng(split[i]);
+                if (++i == split.length) {
+                    return;
+                }
+                window.setTimeout(delayedLoop, 1500);
+            }
+
+            function addressToLatLng(addr) {
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({
+                    "address": addr
+                }, function (results, status) {
+          if ($("#c").attr('checked'))
+          {
+            addr = addr + "=";
+          }
+          else {
+            addr = "";
+          }
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        var lat = $("#lat").val();
+                        var lng = $("#lng").val();
+                        $("#lat").val(results[0].geometry.location.lat());
+                        $("#lng").val(results[0].geometry.location.lng());
+                    } else {
+                        var lat = $("#lat").val();
+                        var lng = $("#lng").val();
+                        $("#lat").val("");
+                        $("#lng").val("");
+                    }
+                });
+            }
+        </script>
+
+	</head>
+	<body>
+
+<!-- header =======================================-->
+		<div class="page-header center-header">
+		  <span>食在方便<small>店家中心</small></span>
+		</div>
+	
+		<div class="container-floid rig-container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-sm-offset-4 rig-panel">
+	
+<!-- 註冊表單 =======================================-->	
+<legend class="text-center font-weight-bold text-success">
+<h2>店家註冊中心</h2>
+<small>基本資料</small>
+</legend>
+	
+<!-- <form action="" method=""> -->
+
+<div class="form-group rig-form-inline">
+	<label for="name">店家名稱</label>
+	<input type="text" name="STR_NAME" id="name" placeholder="店家名稱" size="40" class="form-control">
+</div>
+
+<div class="form-group rig-form-inline">
+	<label for="categ">店家類別</label>
+	<select class="form-control" name="STOCA_NAME" id="categ" style="width:10em;">
+	<option value=“請選擇”>請選擇</option>
+    <option value="中式料理">中式料理</option>
+    <option value="義式料理">義式料理</option>
+    <option value="泰式料理">泰式料理</option>
+    <option value="法式料理">法式料理</option>
+    <option value="印度料理">印度料理</option>
+    <option value="日式居酒屋">日式居酒屋</option>
+  </select>
+</div>
+
+<div class="form-group rig-form-inline">
+	<label for="county">縣市</label>		
+		<select class="form-control" name="STR_COU" id="county" style="width:180px;">
+		<option value=“請選擇”>請選擇</option>
+	    <option value="台北市">台北市</option>
+	    <option value="桃園市">桃園市</option>
+	    <option value="新竹市">新竹市</option>
+  	</select>
+</div>
+
+<div class="form-group rig-form-inline">
+	<label for="city">地區</label>
+	<input type="text" name="STR_CITY" id="city" size="34" class="form-control">
+</div>
+	
+<div class="form-group">
+	<label for="addr">詳細地址</label>
+	<input type="text" name="STR_ADDR" id="addr" class="form-control">
+</div>
+
+<div class="form-group rig-form-inline">
+	<label for="attn">聯絡人</label>
+	<input type="text" name="STR_ATN" id="attn" size="20" class="form-control">
+</div>
+
+<div class="form-group rig-form-inline">
+	<label for="tel">聯絡電話</label>
+	<input type="tel" name="STR_TEL" id="tel" size="35" class="form-control" placeholder="02-12345678">
+</div>
+
+<div class="form-group">
+	<label for="mail">聯絡信箱</label>
+	<input type="mail" name="STR_MA" id="mail" placeholder="請填入連絡信箱" class="form-control">
+</div>
+
+<div>
+	<input type="hidden" name="lat" value="" id="lat">
+</div>
+
+<div>
+	<input type="hidden" name="lng" value="" id="lng">
+</div>
+
+<div><button class="btn btn-success btn-block btn-lg login-btn" onclick="trans();">提交</button></div>
+<!-- </form> -->
+<!-- 表單內容結束 =======================================-->
+				</div>
+			</div>
+		</div>
+	
+
+<!-- 	<footer >
+      <div class="container">
+        <div class="col-sm-2">
+          <img src="" class="img-responsive">
+        </div>
+        <div class="col-sm-2">
+          <h5>公司</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">文件資料</a></li>
+            <li><a href="#">Packt出版社</a></li>
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">聯絡資訊</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5>社群</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">部落格</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5>客戶支援</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">聯絡資訊</a></li>
+            <li><a href="#">隱私政策</a></li>
+            <li><a href="#">條款與細則</a></li>
+            <li><a href="#">服務台</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <address>
+            <strong>食在方便有限公司</strong>
+            地址第 1 行<br>
+			地址第 2 行<br>
+            <abbr title="Phone">TEL：</abbr> (02) 1234-5678
+          </address>
+        </div>
+      </div>
+    </footer>
+
+ -->
+	
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	</body>
+</html>

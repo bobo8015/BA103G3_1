@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>Rigister Page</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<style>
+			.form-group {
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+
+<!-- header =======================================-->
+		<div class="page-header center-header">
+		  <span>食在方便<small>店家中心</small></span>
+		</div>
+<!-- 註冊表單 =======================================-->		
+<div class="container-floid rig-container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4 col-sm-offset-4 rig-panel">
+
+
+<legend class="text-center font-weight-bold text-success">
+<h2>店家註冊中心</h2>
+<small>詳細資料</small>
+</legend>
+	
+<form action="" method="">
+
+<div class="form-group">
+	平均備餐時間<br>
+	<label class="radio-inline" for="time1">
+		<input type="radio" name="STR_PRE" id="time1" value="15">15 分鐘
+	</label>
+	<label class="radio-inline" for="time2">
+		<input type="radio" name="STR_PRE" id="time2" value="30" checked>30 分鐘
+	</label>
+	<label class="radio-inline" for="time3">
+		<input type="radio" name="STR_PRE" id="time3" value="60" >60 分鐘
+	</label>
+	<label class="radio-inline" for="time4">
+		<input type="radio" name="STR_PRE" id="time4" value="90" >90 分鐘
+	</label>
+</div>
+
+
+<!-- <div class="form-group">
+	<label for="pre">平均備餐時間（分鐘)</label>
+	<input type="number" name="STR_PRE" min="15" max="90" step="15" class="form-control" placeholder="30, 60, 90" id="pre" checked="30">
+</div> -->
+
+<div class="form-group">
+	是否提供外送?<br>
+	<label class="radio-inline" for="true">
+		<input type="radio" name="STR_SHIP" id="true" value="TRUE" checked>Yes
+	</label>
+	<label class="radio-inline" for="false">
+		<input type="radio" name="STR_SHIP" id="false" value="FALSE">No
+	</label>
+</div>
+
+<div><button class="btn btn-success btn-block btn-lg login-btn">確認送出</button></div>
+</form>
+<!-- 表單內容結束 =======================================-->
+		</div>
+	</div>
+</div>
+
+<!-- <label class="control-label">店家圖片</label>
+	<input id="input-6" name="input6[]" type="file" multiple class="file-loading">
+	<script>
+		$(document).on('ready', function() {
+		    $("#input-6").fileinput({
+		        showUpload: false,
+		        maxFileCount: 10,
+		        mainClass: "input-group-lg"
+		    });
+		});
+	</script>	 -->
+
+
+
+<!-- 	<footer >
+      <div class="container">
+        <div class="col-sm-2">
+          <img src="" class="img-responsive">
+        </div>
+        <div class="col-sm-2">
+          <h5>公司</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">文件資料</a></li>
+            <li><a href="#">Packt出版社</a></li>
+            <li><a href="#">關於我們</a></li>
+            <li><a href="#">聯絡資訊</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5>社群</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">部落格</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5>客戶支援</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">聯絡資訊</a></li>
+            <li><a href="#">隱私政策</a></li>
+            <li><a href="#">條款與細則</a></li>
+            <li><a href="#">服務台</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <address>
+            <strong>食在方便有限公司</strong>
+            地址第 1 行<br>
+			地址第 2 行<br>
+            <abbr title="Phone">TEL：</abbr> (02) 1234-5678
+          </address>
+        </div>
+      </div>
+    </footer>
+
+ -->
+	
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+			$("#input-700").fileinput({
+    		uploadUrl: "http://localhost/file-upload-single/1", // server upload action
+    		uploadAsync: true,
+    		maxFileCount: 5
+			});
+		</script>
+
+	</body>
+</html>
