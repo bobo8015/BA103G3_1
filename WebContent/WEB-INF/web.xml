@@ -29,5 +29,14 @@
  		<servlet-name>FavServlet2</servlet-name>
  		<url-pattern>/fav/infav.do</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>Mem_Red_Img</servlet-name>
+		<servlet-class>com.tools.Mem_Red_Img</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Mem_Red_Img</servlet-name>
+		<url-pattern>/tools/Mem_Red_Img</url-pattern>
+	</servlet-mapping>
  	
  </web-app>

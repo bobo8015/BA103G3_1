@@ -156,12 +156,17 @@
           	<div role="tabpanel" class="tab-pane active" id="tab1">
           	
               <c:forEach var="favVO" items="${list}">    
-                	<div class="fatable"> <img class="abc" src="images/bobo_image/4_4.jpg">
+                	<div class="fatable"> 
+                	 	
                 		<c:forEach var="strVO" items="${storeSvc.all}">	
+                		
                 			<c:if test="${favVO.str_no==strVO.str_no}"> 
+                			<img class="abc" src="http://localhost:8081<%=request.getContextPath()%>/tools/Mem_Red_Img?str_no=${strVO.str_no} ">
                 			${strVO.str_name} 
-                			
-                			${strVO.str_img}
+                		
+                		
+              			
+                				
                 			</c:if>
                 		</c:forEach> 	
 	                  	<div style="float:right;">
