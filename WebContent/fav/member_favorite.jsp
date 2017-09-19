@@ -10,7 +10,7 @@
 	String mem_no = (String) session.getAttribute("mem_no");	
 	
 	if(mem_no == null){
-		session.setAttribute("mem_no", "MEM_0006");		
+		session.setAttribute("mem_no", "MEM_0003");		
 		mem_no = (String) session.getAttribute("mem_no");		
 	}
 
@@ -26,6 +26,7 @@
 	<jsp:useBean id="storeSvc" scope="page" class="com.store.model.strService" />
 	
 	
+	
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -36,7 +37,7 @@
 		<link rel="short Icon" type="images/x-icon" href="images/logo.jpg">
    	<link rel="stylesheet" href="css/member.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/favorite.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/fav/css/favorite.css">
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -161,22 +162,23 @@
                 		<c:forEach var="strVO" items="${storeSvc.all}">	
                 		
                 			<c:if test="${favVO.str_no==strVO.str_no}"> 
+                			<div>
                 			<img class="abc" src="http://localhost:8081<%=request.getContextPath()%>/tools/Mem_Red_Img?str_no=${strVO.str_no} ">
                 			${strVO.str_name} 
-                		
-                		
-              			
-                				
-                			</c:if>
-                		</c:forEach> 	
-	                  	<div style="float:right;">
+                			<div style="float:right;">
 	                  	
 							<FORM METHOD="post" ACTION="<%=request.getContextPath()%>/fav/fav.do">
 						    <input type="submit" class="btn btn-danger btn-tb" value="移除">    		
 						    <input type="hidden" name="mem_no" value="${mem_no}">
 						    <input type="hidden" name="str_no" value="${favVO.str_no}">
 						    <input type="hidden" name="action"value="delete_For_Fav"></FORM>
-	                  	</div>
+	                  		</div>
+                			</div>
+               				
+               				
+                			</c:if>
+                		</c:forEach> 	
+	                  	
                   	</div>
               </c:forEach> 
               

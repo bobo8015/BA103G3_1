@@ -421,6 +421,12 @@ public class StrDAO implements StrDAO_interface {
 		}
 		return stocaList;
 	}
+
+	@Override
+	public void updateInfo_Img(StrVO strVO) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

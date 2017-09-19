@@ -8,7 +8,7 @@
 	String mem_no = (String) session.getAttribute("mem_no");	
 	
 	if(mem_no == null){
-		session.setAttribute("mem_no", "MEM_0006");		
+		session.setAttribute("mem_no", "MEM_0002");		
 		mem_no = (String) session.getAttribute("mem_no");		
 	}
 %>

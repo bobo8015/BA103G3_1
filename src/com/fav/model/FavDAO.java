@@ -25,13 +25,13 @@ public class FavDAO implements FavDAO_interface{
 	}
 	
 	private static final String INSERT_STMT = 
-			"INSERT INTO FAVORITE (MEM_NO,STR_NO) VALUES(?,?)";
-		private static final String GET_ALL_STMT = 
-			"SELECT MEM_NO,STR_NO FROM FAVORITE  order by MEM_NO";
-		private static final String GET_ONE_STMT = 
-			"SELECT MEM_NO,STR_NO FROM FAVORITE  where MEM_NO = ?";
-		private static final String DELETE = 
-			"DELETE FROM FAVORITE where MEM_NO=? and STR_NO = ?";
+		"INSERT INTO FAVORITE (MEM_NO,STR_NO) VALUES(?,?)";
+	private static final String GET_ALL_STMT = 
+		"SELECT MEM_NO,STR_NO FROM FAVORITE  order by MEM_NO";
+	private static final String GET_ONE_STMT = 
+		"SELECT MEM_NO,STR_NO FROM FAVORITE  where MEM_NO = ?";
+	private static final String DELETE = 
+		"DELETE FROM FAVORITE where MEM_NO=? and STR_NO = ?";
 		
 	public void insert(FavVO favVO){
 		Connection con= null;

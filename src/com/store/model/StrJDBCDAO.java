@@ -16,7 +16,7 @@ import com.storecategory.model.StocaVO;
 
 public class StrJDBCDAO implements StrDAO_interface {
 	
-	private static final String URL = "jdbc:oracle:thin:@localhost:1521:XE";
+	private static final String URL = "jdbc:oracle:thin:@ec2-52-192-8-107.ap-northeast-1.compute.amazonaws.com:1521:XE";
 	private static final String USER = "easyfood";
 	private static final String PASSWORD = "easyfood";
 	private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
@@ -28,6 +28,7 @@ public class StrJDBCDAO implements StrDAO_interface {
 			+"STR_ATN = ?, STR_PRE = ?, STR_SHIP = ?, STR_MA = ?, STR_LONG = ?, STR_LAT = ?"
 			+"WHERE STR_NO = ?";
 	private static final String UPDATE_INFO = "UPDATE STORE SET STR_IMG = ?, STR_NOTE = ? WHERE STR_NO = ?";
+	private static final String UPDATE_INFO_IMG = "UPDATE STORE SET STR_IMG = ? WHERE STR_NO = ?";
 	private static final String UPDATE_PAS = "UPDATE STORE SET STR_PAS = ? WHERE STR_NO = ?";
 	private static final String UPDATE_STAT = "UPDATE STORE SET STR_STAT = ? WHERE STR_NO = ?";
 	private static final String GET_ONE = "SELECT * FROM STORE WHERE STR_NO = ?";
@@ -469,7 +470,35 @@ public class StrJDBCDAO implements StrDAO_interface {
 		}
 		return stocaList;
 	}
-	
 
+	@Override
+	public void updateInfo_Img(StrVO strVO) {
+		Connection con = null;
+		PreparedStatement state = null;
+		
+		try {
+			Class.forName(DRIVER);
+			con = DriverManager.getConnection(URL, USER, PASSWORD);
+			state = con.prepareStatement(UPDATE_INFO_IMG);
+			
+			state.setBytes(1, strVO.getStr_img());
+			state.setString(2, strVO.getStr_no());
+			
+			state.execute();
+			
+		} catch (ClassNotFoundException ce) {
+			throw new RuntimeException("Couldn't load database driver. " + ce.getMessage());
+		} catch (SQLException se) {
+			throw new RuntimeException("A database error occured. " + se.getMessage());
+		} finally {
+			if(con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace(System.err);
+				}
+			}
+				
+		}
+	}
 }
-

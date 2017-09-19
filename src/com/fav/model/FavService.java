@@ -27,7 +27,7 @@ public class FavService {
 			
 			dao.delete(mem_no, str_no);
 			
-			System.out.println("6666");
+			
 			
 					
 		}

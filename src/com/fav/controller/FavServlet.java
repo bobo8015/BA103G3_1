@@ -29,7 +29,8 @@ public class FavServlet extends HttpServlet{
 		String mem_no = req.getParameter("mem_no");
 //		System.out.println(action);
 //		System.out.println(mem_no);
-		if("getAll_For_Fav".equals(action)){
+		
+	if("getAll_For_Fav".equals(action)){
 			
 			List<String> errorMsgs = new LinkedList<String>();
 			
