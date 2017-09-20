@@ -16,7 +16,7 @@ import com.storecategory.model.StocaVO;
 
 public class StrJDBCDAO implements StrDAO_interface {
 	
-	private static final String URL = "jdbc:oracle:thin:@ec2-52-192-8-107.ap-northeast-1.compute.amazonaws.com:1521:XE";
+	private static final String URL = "jdbc:oracle:thin:@localhost:1521:1521:XE";
 	private static final String USER = "easyfood";
 	private static final String PASSWORD = "easyfood";
 	private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";

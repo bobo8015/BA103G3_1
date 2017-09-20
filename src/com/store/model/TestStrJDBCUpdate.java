@@ -27,13 +27,21 @@ public class TestStrJDBCUpdate {
 		
 		
 		StrVO vo2 = new StrVO();
-		byte [] pic = ShareTool.sendPicture("D://image/4_3.jpg");
-		vo2.setStr_img(pic);
-//		String text = ShareTool.sendInfo("info/chinese.txt");
-//		vo2.setStr_note(text);
-		vo2.setStr_no("STR_0010");
-		dao.updateInfo(vo2);
 		
+		for(int i=1 ;i<37;i++){
+			
+			String no = "STR_00"+String.format("%02d", i);
+			byte [] pic = ShareTool.sendPicture("D://ig/"+i+".jpg");
+			vo2.setStr_img(pic);
+			String text = ShareTool.sendInfo("D://chinese.txt");
+			vo2.setStr_note(text);
+			vo2.setStr_no(no);
+			System.out.println(vo2);
+			dao.updateInfo(vo2);
+			
+		}
+		
+//		
 //		dao.updatePas("STR_0040", "flow815A");
 //		
 //		dao.updateStatus("STR_0040", "營業中");

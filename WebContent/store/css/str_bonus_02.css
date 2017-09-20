@@ -1,0 +1,66 @@
+			.page-header.order-page {
+				margin-top: 0;
+				margin-bottom: 20px;
+				font-size: 24px;
+			}
+			form.search,
+			.input-group-sm {
+				line-height: 2;
+				display: flex;
+			}
+			span.middle,
+			span.divider {
+				margin-left: 8px;
+				margin-right: 8px;
+				vertical-align: middle;
+			}
+			th {
+				font-size: 16px;
+				max-width: 100%;
+				white-space:nowrap;
+			}
+			td {
+				font-size: 14px;
+				max-width: 100%;
+				white-space:nowrap;
+			}
+			caption {
+				font-size: large;
+				text-align: center;
+				color: #777;
+			}
+			.input-sm {
+				border: 2px solid #ccc;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			button.btn.btn-query.btn-sm {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				color: #fff;
+				font-size: 14px;
+			}
+			.pagination>li>a {
+				color: #34495E;
+				font-size: 18px;
+			}
+			.pagination>li>a:focus {
+				color: #fff;
+				background-color: #888;
+				border-color: #888;
+			}
+			.pager>li>a {
+				color: #34495E;
+				font-size: 18px;
+			}
+			.pager>li>a:focus {
+				color: #fff;
+				background-color: #888;
+				border-color: #888;
+			}
+			.btn {
+					font-size: 15px;
+					text-align: right;
+					padding: 3px;
+					margin-top: 10px;
+                 }

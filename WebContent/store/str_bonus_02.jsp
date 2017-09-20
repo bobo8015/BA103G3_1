@@ -19,78 +19,10 @@
 		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="../css/base.css">
 		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="stylesheet" href="<%=request.getContextPath()%>/store/css/str_bonus_02.css">
 		
 	</head>
-		<style type="text/css">
-			.page-header.order-page {
-				margin-top: 0;
-				margin-bottom: 20px;
-				font-size: 24px;
-			}
-			form.search,
-			.input-group-sm {
-				line-height: 2;
-				display: flex;
-			}
-			span.middle,
-			span.divider {
-				margin-left: 8px;
-				margin-right: 8px;
-				vertical-align: middle;
-			}
-			th {
-				font-size: 16px;
-				max-width: 100%;
-				white-space:nowrap;
-			}
-			td {
-				font-size: 14px;
-				max-width: 100%;
-				white-space:nowrap;
-			}
-			caption {
-				font-size: large;
-				text-align: center;
-				color: #777;
-			}
-			.input-sm {
-				border: 2px solid #ccc;
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-			}
-			button.btn.btn-query.btn-sm {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-				color: #fff;
-				font-size: 14px;
-			}
-			.pagination>li>a {
-				color: #34495E;
-				font-size: 18px;
-			}
-			.pagination>li>a:focus {
-				color: #fff;
-				background-color: #888;
-				border-color: #888;
-			}
-			.pager>li>a {
-				color: #34495E;
-				font-size: 18px;
-			}
-			.pager>li>a:focus {
-				color: #fff;
-				background-color: #888;
-				border-color: #888;
-			}
-			.btn {
-					font-size: 15px;
-					text-align: right;
-					padding: 3px;
-                 }
-            .margintt{
-            	margin: 5px 
-            }     
-		</style>
+		
 	<body>
 <!-- header======================================= -->	
 		<div class="page-header center-header">
@@ -195,18 +127,21 @@
 				</div>
 					
 				<div class="margintt">優惠種類:
-					<select name="month" class="select-sm" >
-						<option value="1">金額</option>
-						<option value="2">類別</option>
+					<select name="style" class="select-sm" >
+						<option value="money">金額</option>
+						<option value="adv">類別</option>
 						
 					</select></div>
 				<div class="margintt">
-					條件:<input type="text" name="">
+					條件:<input type="text" name="condition">
 				</div>	
 				<div class="margintt">
-					折扣:<input type="text" name="">
-					</div>	
-				<td><button type="button" class="btn btn-info margintt">上架</button></td>
+					折扣:<input type="text" name="discount">
+				</div>
+					
+				<td><button type="button" class="btn btn-info margintt">上架</button>
+					<input type="hidden" name="action" value="Insert_For_Pro">
+				</td>
 
 			</FORM>
 			</div>
