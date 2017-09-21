@@ -12,6 +12,7 @@ public interface DishDAO_interface {
 	public List<DishVO> findByPrice(Double minPrice, Double maxPrice);
 	public List<DishVO> findByArea(String area);
 	public List<DishVO> getALL();
+	public List<DishVO> getDishClassForStr(String str_no);
 	
 
-}
+} 

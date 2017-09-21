@@ -136,13 +136,25 @@
 					
 				<div class="margintt">優惠種類:
 					<select name="style" class="select-sm" >
+						<option value="dishclass">類別</option>
 						<option value="money">金額</option>
-						<option value="adv">類別</option>
-						
 					</select></div>
+					
 				<div class="margintt">
-					條件:<input type="number" name="condition" min=0>
-				</div>	
+					種類1:<select name="style" class="select-sm" >
+						<option value="dishclass">類別</option>
+						<option value="money">金額</option>					
+					</select></div>
+				
+				
+				<div class="margintt">
+					種類2:<select name="style" class="select-sm" >
+						<option value="dishclass">類別</option>
+						<option value="money">金額</option>					
+					</select></div>
+			
+				
+					
 				<div class="margintt">
 					折扣:<input type="number" name="discount" min=0 max=100>
 				</div>

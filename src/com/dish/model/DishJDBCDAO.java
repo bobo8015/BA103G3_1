@@ -427,4 +427,10 @@ public class DishJDBCDAO implements DishDAO_interface {
 		return allList;
 	}
 
+	@Override
+	public List<DishVO> getDishClassForStr(String str_no) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

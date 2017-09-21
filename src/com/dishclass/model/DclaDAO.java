@@ -31,6 +31,7 @@ public class DclaDAO implements DclaDAO_interface {
 	private static final String GET_ONE = "SELECT DCLA_NO, DCLA_NAME FROM DISHCLASS WHERE DCLA_NO = ?";
 	private static final String GET_ALL = "SELECT DCLA_NO, DCLA_NAME FROM DISHCLASS ORDER BY DCLA_NO";
 	
+	
 	@Override
 	public void insert(DclaVO dclaVO) {
 		

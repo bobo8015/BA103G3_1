@@ -42,7 +42,7 @@
  	
  		<servlet>
 		<servlet-name>ProServlet</servlet-name>
-		<servlet-class>com.controller.ProServlet</servlet-class>
+		<servlet-class>com.pro.controller.ProServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
